@@ -24,20 +24,26 @@ export function NavBar() {
     >
       <div className="w-full md:my-auto">
         <div className="relative flex items-center justify-between">
+<<<<<<< HEAD
           <Link href={siteConfig.baseLinks.home} aria-label="Home" className="flex items-center gap-2">
             <Image src="/logo.png" alt="Jynx Logo" width={40} height={40} className="h-auto w-auto" />
             <span className="text-lg font-semibold text-gray-900">{siteConfig.name}</span>
+=======
+          <Link href={siteConfig.baseLinks.home} aria-label="Home">
+            <span className="sr-only">Jynx-ev Logo</span>
+            <SolarLogo className="w-22" />
+>>>>>>> ed78bd9470bd35c78cfc51dd52c4a93317bcf94c
           </Link>
           <nav className="hidden sm:block md:absolute md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:transform">
             <div className="flex items-center gap-10 font-medium">
               <Link className="px-2 py-1 text-gray-900" href="#solutions">
-                Solutions
+              Platform
               </Link>
               <Link className="px-2 py-1 text-gray-900" href="#farm-management">
-                Farm Management
+              Charging Operations
               </Link>
               <Link className="px-2 py-1 text-gray-900" href="#solar-analytics">
-                Analytics
+              Grid Intelligence
               </Link>
             </div>
           </nav>
@@ -45,7 +51,7 @@ export function NavBar() {
             variant="secondary"
             className="hidden h-10 font-semibold sm:block"
           >
-            Get a quote
+            Talk to Our Team
           </Button>
           <Button
             onClick={() => setOpen(!open)}
