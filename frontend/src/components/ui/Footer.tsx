@@ -5,7 +5,9 @@ import {
   RiYoutubeFill,
 } from "@remixicon/react"
 import Link from "next/link"
-import { SolarLogo } from "../../../public/SolarLogo"
+import Image from "next/image"
+import { siteConfig } from "@/app/siteConfig"
+
 const CURRENT_YEAR = new Date().getFullYear()
 
 const Footer = () => {
@@ -144,11 +146,11 @@ const Footer = () => {
         <div className="mr-auto flex w-full justify-between lg:w-fit lg:flex-col">
           <Link
             href="/"
-            className="flex items-center font-medium text-gray-700 select-none sm:text-sm"
+            className="flex items-center gap-2 font-medium text-gray-700 select-none sm:text-sm"
           >
-            <SolarLogo className="ml-2 w-20" />
-
-            <span className="sr-only">Solar Logo (go home)</span>
+            <Image src="/logo.png" alt="Jynx Logo" width={40} height={40} className="h-auto w-auto" />
+            <span className="text-base font-semibold">{siteConfig.name}</span>
+            <span className="sr-only">Logo (go home)</span>
           </Link>
 
           <div>
@@ -188,7 +190,7 @@ const Footer = () => {
               </Link>
             </div>
             <div className="ml-2 hidden text-sm text-gray-700 lg:inline">
-              &copy; {CURRENT_YEAR} Solar Technologies, Inc.
+              &copy; {CURRENT_YEAR} {siteConfig.name}
             </div>
           </div>
         </div>
